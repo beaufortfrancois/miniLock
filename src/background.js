@@ -8,7 +8,7 @@ chrome.app.runtime.onLaunched.addListener(function(input) {
 			},
 			resizable: false
 		}, function() {
-			if (input && input.items && input.items[0]) {
+			if (input && input.hasOwnProperty(items) && input.items[0]) {
 				// Leave a reference to the input file entry so that the
 				// new window can pick it up after it has loaded.
 				window.inputFileEntry = input.items[0].entry
